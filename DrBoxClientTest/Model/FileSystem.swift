@@ -7,6 +7,8 @@
 import PhotosUI
 import SwiftUI
 
+let cache = DataCache()
+
 func getUploadFilename (_ folder : String, item : NSItemProvider) -> String {
     let name = item.suggestedName ?? "no_name_"
     let words = (item.registeredContentTypes.first?.description ?? "").components(separatedBy: ".")

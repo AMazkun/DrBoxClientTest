@@ -34,8 +34,6 @@
 		841814DA2ACC334A00560C88 /* DrBoxClientTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88B42AC6C3F1004589ED /* DrBoxClientTestApp.swift */; };
 		841814DC2ACC335100560C88 /* ZoomaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7AC182ACA11DB006D407C /* ZoomaScrollView.swift */; };
 		841814DD2ACC335100560C88 /* AsyncFullImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B641F2AC9F13400AACB28 /* AsyncFullImage.swift */; };
-		841814E32ACC335C00560C88 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88B62AC6C3F1004589ED /* AppView.swift */; };
-		841814E42ACC335C00560C88 /* FileSecListItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847312682AC82A73005EEA9C /* FileSecListItem+.swift */; };
 		841814E92ACC336E00560C88 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64142AC9C48500AACB28 /* ListItem.swift */; };
 		841814EA2ACC336E00560C88 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3C4382ACAE09A009A7E1E /* FileSystem.swift */; };
 		841814EB2ACC336E00560C88 /* TempFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A7852ACACFC900D08070 /* TempFiles.swift */; };
@@ -48,9 +46,6 @@
 		844EABF42ACC40FB0080044B /* UploadFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EABF02ACC40FB0080044B /* UploadFileTests.swift */; };
 		844EABFC2ACC42360080044B /* DrBoxClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EABFB2ACC42360080044B /* DrBoxClientUITests.swift */; };
 		844EABFE2ACC42360080044B /* DrBoxClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EABFD2ACC42360080044B /* DrBoxClientUITestsLaunchTests.swift */; };
-		844EAC042ACC43620080044B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88B62AC6C3F1004589ED /* AppView.swift */; };
-		844EAC062ACC43720080044B /* FilesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88EE2AC6C87F004589ED /* FilesSection.swift */; };
-		844EAC072ACC43760080044B /* FileSecListItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847312682AC82A73005EEA9C /* FileSecListItem+.swift */; };
 		847312692AC82A73005EEA9C /* FileSecListItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847312682AC82A73005EEA9C /* FileSecListItem+.swift */; };
 		847B64152AC9C48500AACB28 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64142AC9C48500AACB28 /* ListItem.swift */; };
 		847B64172AC9DA1D00AACB28 /* ShowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64162AC9DA1D00AACB28 /* ShowImage.swift */; };
@@ -66,9 +61,7 @@
 		848F88E62AC6C6AB004589ED /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 848F88E52AC6C6AB004589ED /* Dependencies */; };
 		848F88EC2AC6C759004589ED /* SignUpSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88EB2AC6C759004589ED /* SignUpSection.swift */; };
 		848F88EF2AC6C87F004589ED /* FilesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88EE2AC6C87F004589ED /* FilesSection.swift */; };
-		848F88F02AC6C87F004589ED /* FilesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88EE2AC6C87F004589ED /* FilesSection.swift */; };
 		848F88F32AC6CA1D004589ED /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88F22AC6CA1D004589ED /* Dependencies.swift */; };
-		848F88F42AC6CA1D004589ED /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88F22AC6CA1D004589ED /* Dependencies.swift */; };
 		848F88F72AC6D9E0004589ED /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88F62AC6D9E0004589ED /* Helper.swift */; };
 		848F88F82AC6D9E0004589ED /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88F62AC6D9E0004589ED /* Helper.swift */; };
 		848F88FF2AC6E398004589ED /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88FA2AC6E398004589ED /* ImageCache.swift */; };
@@ -103,6 +96,11 @@
 		84D8B2C92AC7626700524721 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B2B62AC7626700524721 /* Client.swift */; };
 		84D8B2CA2AC7626700524721 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B2B72AC7626700524721 /* Credentials.swift */; };
 		84DFF08D2ACB2E40002CAC93 /* PHImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF08C2ACB2E40002CAC93 /* PHImagePicker.swift */; };
+		84E3DFDD2ACC5EA400598C85 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88B62AC6C3F1004589ED /* AppView.swift */; };
+		84E3DFDF2ACC60BA00598C85 /* FilesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88EE2AC6C87F004589ED /* FilesSection.swift */; };
+		84E3DFE02ACC60BD00598C85 /* SignUpSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88EB2AC6C759004589ED /* SignUpSection.swift */; };
+		84E3DFE12ACC617100598C85 /* FileSecListItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847312682AC82A73005EEA9C /* FileSecListItem+.swift */; };
+		84E3DFE22ACC62FD00598C85 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88F22AC6CA1D004589ED /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -510,11 +508,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844EAC072ACC43760080044B /* FileSecListItem+.swift in Sources */,
 				844EABFC2ACC42360080044B /* DrBoxClientUITests.swift in Sources */,
-				844EAC062ACC43720080044B /* FilesSection.swift in Sources */,
 				844EABFE2ACC42360080044B /* DrBoxClientUITestsLaunchTests.swift in Sources */,
-				844EAC042ACC43620080044B /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,27 +570,27 @@
 				841814F52ACC337900560C88 /* UIActivityViewController.swift in Sources */,
 				841814BA2ACC333300560C88 /* GetThumbnail.swift in Sources */,
 				841814EA2ACC336E00560C88 /* FileSystem.swift in Sources */,
+				84E3DFE12ACC617100598C85 /* FileSecListItem+.swift in Sources */,
 				844EABF42ACC40FB0080044B /* UploadFileTests.swift in Sources */,
-				841814E32ACC335C00560C88 /* AppView.swift in Sources */,
 				841814ED2ACC336E00560C88 /* ShowVideo.swift in Sources */,
 				841814EC2ACC336E00560C88 /* ShowImage.swift in Sources */,
 				841814C72ACC334400560C88 /* Config.swift in Sources */,
 				841814B02ACC32D000560C88 /* TestHelpers.swift in Sources */,
-				841814E42ACC335C00560C88 /* FileSecListItem+.swift in Sources */,
 				841814CB2ACC334400560C88 /* ActorIsolated.swift in Sources */,
 				841814C52ACC334400560C88 /* Client.swift in Sources */,
 				841814C62ACC334400560C88 /* Credentials.swift in Sources */,
 				841814C12ACC334400560C88 /* DownloadFile.swift in Sources */,
 				841814CA2ACC334400560C88 /* DateGenerator.swift in Sources */,
-				848F88F42AC6CA1D004589ED /* Dependencies.swift in Sources */,
 				841814C42ACC334400560C88 /* Keychain.swift in Sources */,
 				848F890B2AC6E97A004589ED /* ImageProvider.swift in Sources */,
 				841814EB2ACC336E00560C88 /* TempFiles.swift in Sources */,
+				84E3DFE22ACC62FD00598C85 /* Dependencies.swift in Sources */,
 				841814B62ACC332800560C88 /* FileMetadata.swift in Sources */,
 				848F88C62AC6C3F2004589ED /* DrBoxClientTestTests.swift in Sources */,
 				841814C92ACC334400560C88 /* PKCEUtils.swift in Sources */,
 				841814B12ACC32D000560C88 /* GetMetadataTests.swift in Sources */,
 				841814AF2ACC32D000560C88 /* DownloadFileTests.swift in Sources */,
+				84E3DFDF2ACC60BA00598C85 /* FilesSection.swift in Sources */,
 				841814C82ACC334400560C88 /* DeleteFile.swift in Sources */,
 				841814DD2ACC335100560C88 /* AsyncFullImage.swift in Sources */,
 				841814DA2ACC334A00560C88 /* DrBoxClientTestApp.swift in Sources */,
@@ -605,13 +600,14 @@
 				848F88F82AC6D9E0004589ED /* Helper.swift in Sources */,
 				841814B22ACC331D00560C88 /* Metadata.swift in Sources */,
 				841814BF2ACC334400560C88 /* UploadFile.swift in Sources */,
-				848F88F02AC6C87F004589ED /* FilesSection.swift in Sources */,
 				841814BC2ACC333B00560C88 /* ListFolder.swift in Sources */,
 				841814B42ACC332200560C88 /* Coding.swift in Sources */,
+				84E3DFDD2ACC5EA400598C85 /* AppView.swift in Sources */,
 				841814F62ACC337900560C88 /* PHImagePicker.swift in Sources */,
 				841814C02ACC334400560C88 /* CurrentValueAsyncSequence.swift in Sources */,
 				841814C32ACC334400560C88 /* HTTPClient.swift in Sources */,
 				841814B82ACC332D00560C88 /* GetMetadata.swift in Sources */,
+				84E3DFE02ACC60BD00598C85 /* SignUpSection.swift in Sources */,
 				844EABF12ACC40FB0080044B /* DeleteFileTests.swift in Sources */,
 				841814BE2ACC334400560C88 /* Auth.swift in Sources */,
 			);
@@ -638,7 +634,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL4AH9RNPQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,7 +652,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL4AH9RNPQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -853,9 +853,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				DEVELOPMENT_TEAM = CL4AH9RNPQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,8 +873,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL4AH9RNPQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

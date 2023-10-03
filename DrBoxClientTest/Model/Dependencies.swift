@@ -3,7 +3,6 @@ import Logging
 import Foundation
 
 let log = Logger(label: Bundle.main.bundleIdentifier!)
-let cache = DataCache()
 
 extension Client: DependencyKey {
   public static let liveValue = Client.live(

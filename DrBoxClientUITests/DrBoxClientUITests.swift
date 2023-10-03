@@ -32,7 +32,7 @@ final class DrBoxClientUITests: XCTestCase {
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
+            // This measures how long it takes to launch your appliche test runner exited with code -1 before finishing running tests. This may be due to your code calling 'exit', consider adding a ation.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }

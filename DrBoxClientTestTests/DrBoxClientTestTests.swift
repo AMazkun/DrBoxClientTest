@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import Dependencies
 
 final class DrBoxClientTestTests: XCTestCase {
 
