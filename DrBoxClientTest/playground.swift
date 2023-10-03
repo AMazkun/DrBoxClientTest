@@ -22,7 +22,7 @@ struct test: View {
 
             
             
-            Image("X_57")
+            Image("IMG_2894")
                 .resizable()
                 .scaledToFit()
 

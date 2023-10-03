@@ -1,13 +1,13 @@
 //
-//  DrBoxClientTestUITestsLaunchTests.swift
-//  DrBoxClientTestUITests
+//  DrBoxClientUITestsLaunchTests.swift
+//  DrBoxClientUITests
 //
-//  Created by admin on 29.09.2023.
+//  Created by admin on 03.10.2023.
 //
 
 import XCTest
 
-final class DrBoxClientTestUITestsLaunchTests: XCTestCase {
+final class DrBoxClientUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

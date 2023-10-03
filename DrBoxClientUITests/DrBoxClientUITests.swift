@@ -1,13 +1,13 @@
 //
-//  DrBoxClientTestUITests.swift
-//  DrBoxClientTestUITests
+//  DrBoxClientUITests.swift
+//  DrBoxClientUITests
 //
-//  Created by admin on 29.09.2023.
+//  Created by admin on 03.10.2023.
 //
 
 import XCTest
 
-final class DrBoxClientTestUITests: XCTestCase {
+final class DrBoxClientUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

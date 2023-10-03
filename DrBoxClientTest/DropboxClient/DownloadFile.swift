@@ -73,9 +73,10 @@ extension DownloadFile {
                 throw Error.response(statusCode: statusCode, data: responseData)
             }
             // parse server response
-            let DropboxApiResult = (response as? HTTPURLResponse)?.allHeaderFields["Dropbox-Api-Result"]
-            let con = try JSONSerialization.jsonObject(with: (DropboxApiResult as! String).data(using: .utf8)!, options: []) as! [String:Any]
-            file_metadata = con
+            if let DropboxApiResult = (response as? HTTPURLResponse)?.allHeaderFields["Dropbox-Api-Result"] {
+                let con = try JSONSerialization.jsonObject(with: (DropboxApiResult as! String).data(using: .utf8)!, options: []) as! [String:Any]
+                file_metadata = con
+            }
             debugPrint(file_metadata as Any)
             
             return responseData

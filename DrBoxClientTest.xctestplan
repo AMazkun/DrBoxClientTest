@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "2D21AA82-B273-48EA-9D56-B54BD2A889A3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DrBoxClientTest.xcodeproj",
+        "identifier" : "848F88C02AC6C3F2004589ED",
+        "name" : "DrBoxClientTestTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DrBoxClientTest.xcodeproj",
+        "identifier" : "844EABF82ACC42360080044B",
+        "name" : "DrBoxClientUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
