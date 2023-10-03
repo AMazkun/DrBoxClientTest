@@ -2,6 +2,9 @@
 Simple SwiftUI app to test DropBox Client SDK
 Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-client)
 
+| home                                                                            | load                                                                        | detail                                                                    |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+
 ## Features
 - Login with Drop Box API
 
