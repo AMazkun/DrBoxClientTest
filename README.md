@@ -101,5 +101,5 @@ Known issues:
 - depends on you account at Drop Box
 - not all tests running on enulyator 
 
-[Test done on current commit: screenshot](https://github.com/AMazkun/DrBoxClientTest/blob/main/Screenshot%202023-10-03%20at%2018.12.01.jpg)
+[Test done on current commit 2023-10-03: screenshot](https://github.com/AMazkun/DrBoxClientTest/blob/main/Screenshot%202023-10-03%20at%2018.12.01.jpg)
 
