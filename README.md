@@ -94,3 +94,12 @@ https://github.com/kean/pulse.git
 
 Useful [Dropbox API v2 documetation](https://www.dropbox.com/developers/documentation/http/documentation)
 
+## Tests / UI Tests
+Some tests done, please check
+
+Known issues:
+- depends on you account at Drop Box
+- not all tests running on enulyator 
+
+[Test done on current commite](https://github.com/AMazkun/DrBoxClientTest/blob/main/Screenshot%202023-10-03%20at%2018.12.01.jpg)
+
