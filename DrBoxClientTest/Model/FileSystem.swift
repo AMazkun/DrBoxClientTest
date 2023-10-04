@@ -23,9 +23,13 @@ func getSuggestedExtention(_ item : NSItemProvider) -> String {
 
 func getUploadFilename(item : NSItemProvider) -> String {
     
-    var name : String
+    var name : String = item.suggestedName ?? "no_name"
     let ext = getSuggestedExtention(item)
-    name = (item.suggestedName ?? "no_name_") + "." + ext
+    let words = name.components(separatedBy: ".")
+    if let last = words.last, last == ext {
+    } else {
+        name = name + "." + ext
+    }
     let res = name.replacingOccurrences(of: "/", with: "-")
 
     debugPrint("Suggested FileName: name: \(res)")
