@@ -77,7 +77,7 @@ extension DownloadFile {
                 let con = try JSONSerialization.jsonObject(with: (DropboxApiResult as! String).data(using: .utf8)!, options: []) as! [String:Any]
                 file_metadata = con
             }
-            debugPrint(file_metadata as Any)
+            debugPrint("DownloadFile:", file_metadata as Any)
             
             return responseData
         }

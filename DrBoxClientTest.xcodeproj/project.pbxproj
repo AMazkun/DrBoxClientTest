@@ -51,6 +51,7 @@
 		847B64172AC9DA1D00AACB28 /* ShowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64162AC9DA1D00AACB28 /* ShowImage.swift */; };
 		847B64192AC9DB9C00AACB28 /* ShowVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64182AC9DB9C00AACB28 /* ShowVideo.swift */; };
 		847B64202AC9F13400AACB28 /* AsyncFullImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B641F2AC9F13400AACB28 /* AsyncFullImage.swift */; };
+		8489E0EC2ACDA52400B34DFC /* PHPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489E0EB2ACDA52400B34DFC /* PHPickerCoordinator.swift */; };
 		848F88B52AC6C3F1004589ED /* DrBoxClientTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88B42AC6C3F1004589ED /* DrBoxClientTestApp.swift */; };
 		848F88B72AC6C3F1004589ED /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F88B62AC6C3F1004589ED /* AppView.swift */; };
 		848F88B92AC6C3F2004589ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848F88B82AC6C3F2004589ED /* Assets.xcassets */; };
@@ -137,6 +138,7 @@
 		847B64162AC9DA1D00AACB28 /* ShowImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImage.swift; sourceTree = "<group>"; };
 		847B64182AC9DB9C00AACB28 /* ShowVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideo.swift; sourceTree = "<group>"; };
 		847B641F2AC9F13400AACB28 /* AsyncFullImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFullImage.swift; sourceTree = "<group>"; };
+		8489E0EB2ACDA52400B34DFC /* PHPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerCoordinator.swift; sourceTree = "<group>"; };
 		848F88B12AC6C3F1004589ED /* DrBoxClientTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrBoxClientTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F88B42AC6C3F1004589ED /* DrBoxClientTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrBoxClientTestApp.swift; sourceTree = "<group>"; };
 		848F88B62AC6C3F1004589ED /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				848F88EB2AC6C759004589ED /* SignUpSection.swift */,
 				848F88EE2AC6C87F004589ED /* FilesSection.swift */,
 				847312682AC82A73005EEA9C /* FileSecListItem+.swift */,
+				847B64142AC9C48500AACB28 /* ListItem.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			children = (
 				84C5A7832ACAAD1600D08070 /* UIActivityViewController.swift */,
 				84DFF08C2ACB2E40002CAC93 /* PHImagePicker.swift */,
+				8489E0EB2ACDA52400B34DFC /* PHPickerCoordinator.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -312,7 +316,6 @@
 			children = (
 				8449D9762ACB568000394781 /* MainView */,
 				8449D9772ACB56F000394781 /* DetailView */,
-				847B64142AC9C48500AACB28 /* ListItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				84D8B2C62AC7626700524721 /* HTTPClient.swift in Sources */,
 				848F890A2AC6E97A004589ED /* ImageProvider.swift in Sources */,
 				84D8B2CA2AC7626700524721 /* Credentials.swift in Sources */,
+				8489E0EC2ACDA52400B34DFC /* PHPickerCoordinator.swift in Sources */,
 				84D8B2BB2AC7626700524721 /* GetMetadata.swift in Sources */,
 				84C5A7842ACAAD1600D08070 /* UIActivityViewController.swift in Sources */,
 				848F890D2AC74115004589ED /* AsyncImageOwn.swift in Sources */,
@@ -802,7 +806,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,7 +836,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -855,7 +859,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CL4AH9RNPQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -875,7 +879,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CL4AH9RNPQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

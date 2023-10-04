@@ -9,29 +9,43 @@ import SwiftUI
 
 let cache = DataCache()
 
-func getUploadFilename (_ folder : String, item : NSItemProvider) -> String {
-    let name = item.suggestedName ?? "no_name_"
+func getSuggestedExtention(_ item : NSItemProvider) -> String {
     let words = (item.registeredContentTypes.first?.description ?? "").components(separatedBy: ".")
-    debugPrint("getUploadFilename: \(name)")
-    debugPrint("getUploadFilename: \(words)")
-    
     var _ext: String = "jpg"
-    var _name: String = "na"
     
     if words.count > 1 {
         _ext = words[1]
         if _ext == "jpeg" {_ext = "jpg"}
-    } else {
-        _ext = "jpg"
+        if _ext == "mpeg-4" {_ext = "mp4"}
     }
-    _name = (name.replacingOccurrences(of: "/", with: "-")) 
-    _ext = "jpg"
+    return _ext
+}
+
+func getUploadFilename(item : NSItemProvider) -> String {
     
-    if (folder == "na") || (folder == "") {
-        return "/" + _name + "." + _ext
+    var name : String
+    let ext = getSuggestedExtention(item)
+    name = (item.suggestedName ?? "no_name_") + "." + ext
+    let res = name.replacingOccurrences(of: "/", with: "-")
+
+    debugPrint("Suggested FileName: name: \(res)")
+    return res
+}
+
+func getFullUploadFilename(_ folder : String, name: String) -> String {
+    var _name: String = "na"
+    var res: String = ""
+    
+    _name = (name.replacingOccurrences(of: "/", with: "-"))
+    
+    if (folder == "na") || (folder == "") || (folder == "/") {
+        res =  "/" + _name
     } else {
-        return folder + "/" + _name + "." + _ext
+        res = folder + "/" + _name 
     }
+    
+    debugPrint("FULL UploadFilename: \(res)")
+    return res
 }
 
 func itsNoRoot(_ folder: String) -> Bool {
@@ -69,12 +83,3 @@ func fileSizeToDisplay(_ fileSize: Int) -> String {
     return String(format: "%.3f T", Double(fileSize) / 1024.0 / 1024.0 / 1024.0 / 1024.0)
 }
 
-func removeTempFiles() {
-    let fileManager = FileManager.default
-    let temporaryDirectory = fileManager.temporaryDirectory
-    try? fileManager
-        .contentsOfDirectory(at: temporaryDirectory, includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
-        .forEach { file in
-            try? fileManager.removeItem(atPath: file.path)
-        }
-}

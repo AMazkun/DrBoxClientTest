@@ -29,7 +29,7 @@ class ImageProvider: ObservableObject {
         
         if entry.tag == Metadata.Tag.folder {
             DispatchQueue.main.async {
-                self.data = CashedImage(data: (UIImage(systemName: "folder" )?.pngData())!, file_metadata: nil, fileType: "folder", fileSize: -1)
+                self.data = CashedImage(data: (UIImage( named: "FolderIcon" )?.pngData())!, file_metadata: nil, fileType: "folder", fileSize: -1)
             }
             return
         }

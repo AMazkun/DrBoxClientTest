@@ -33,7 +33,6 @@ struct ListItem: View {
         _loader = StateObject(wrappedValue: ImageProvider(entry: entry))
     }
     
-    
     var body: some View {
         Section {
             HStack {
@@ -77,25 +76,25 @@ struct ListItem: View {
                             .buttonStyle(.borderless)
                         }
                         
-//                        Spacer()
-//                        Button {
-//                            replaceEntry(entry)
-//                        } label: {
-//                            Text("Replace")
-//                        }
-//                        .buttonStyle(.borderless)
-
+                        //                        Spacer()
+                        //                        Button {
+                        //                            replaceEntry(entry)
+                        //                        } label: {
+                        //                            Text("Replace")
+                        //                        }
+                        //                        .buttonStyle(.borderless)
+                        
                         Spacer()
-
+                        
                         Button(role: .destructive) {
                             deleteEntry(entry)
                         } label: {
                             Text("Delete")
                         }
                         .buttonStyle(.borderless)
-
+                        
                         Spacer()
-
+                        
                         Text(fileSizeToDisplay(loader.data!.fileSize))
                             .font(.subheadline)
                             .frame(alignment: .trailing)
@@ -104,15 +103,15 @@ struct ListItem: View {
                     .padding(.leading)
                 } else {
                     // diffferent order that is duplicated
-                        Spacer()
-                        Button(role: .destructive) {
-                            deleteEntry(entry)
-                        } label: {
-                            Text("Delete")
-                        }
-                        .buttonStyle(.borderless)
-                        Spacer()
-                 }
+                    Spacer()
+                    Button(role: .destructive) {
+                        deleteEntry(entry)
+                    } label: {
+                        Text("Delete")
+                    }
+                    .buttonStyle(.borderless)
+                    Spacer()
+                }
             }
             .padding(.top)
             
@@ -126,7 +125,6 @@ struct ListItem: View {
                     Text(entry.name).font(.system(size: 14)).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).lineLimit(1)
                 }
             }
-            
         }
         
         .onAppear(perform: {

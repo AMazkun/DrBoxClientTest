@@ -39,7 +39,7 @@ struct ShowVideo: View {
                         Text("Loading video ...\nbe paitient. ")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(.top, 20)
-                       
+                        
                     }
                 }
                 .padding([.leading,.trailing], 15)
@@ -48,10 +48,17 @@ struct ShowVideo: View {
                 .opacity(0.7)
             }
             
-            if let tempFile = tempFileCopy(data: loader.data?.data, entry: entry), let url = tempFile.url {
-                ShareLink(item: (url)){
-                    Label("Tap me to share", systemImage:  "square.and.arrow.up")
-                }
+            // share content
+            if let _ = loader.data {
+                Button { self.isSharePresented = true }
+            label: { Label("Share", systemImage: "square.and.arrow.up") }
+                    .sheet(isPresented: $isSharePresented, onDismiss: {
+                        debugPrint("Dismiss ActivityViewController")
+                    }, content: {
+                        if let tempFile = tempFileCopy(data: loader.data?.data, entry: entry), let url = tempFile.url {
+                            ActivityViewController(activityItems: [url] )
+                        }
+                    })
             }
         }
         .padding(5)

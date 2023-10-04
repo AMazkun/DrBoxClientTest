@@ -36,24 +36,25 @@ extension AppView {
         }
     }
     
-    func itemPublisher (item: NSItemProvider, image: UIImage) {
-        let fileName = getUploadFilename(folder, item: item)
+    func itemPublisher (item: NSItemProvider, data : Data?, uploadFileName : String) {
+        let fileName = getFullUploadFilename(folder, name: uploadFileName)
         Task {
             // Retrieve selected asset in the form of Data
             startUploadTask()
             do {
                 let what = try await client.uploadFile(
                     path: fileName,
-                    data: image.jpegData(compressionQuality: 1.0)!,
+                    data: data!,
                     mode: .add,
                     autorename: true
                 )
-                debugPrint("client.uploadFile: \(what)")
+                debugPrint("itemPublisher.uploadFile: \(what)")
             } catch {
                 log.error("UploadFile failure", metadata: [
                     "error": "\(error)",
                     "localizedDescription": "\(error.localizedDescription)"
                 ])
+                debugPrint("itemPublisher.uploadFile: \(error)")
             }
             stopUploadTask()
         }
@@ -87,7 +88,6 @@ extension AppView {
                 isPHPresented.toggle()
             }
             .sheet(isPresented: $isPHPresented) {
-                let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
                 PhotoPicker(itemPublisher: itemPublisher)
             }
             

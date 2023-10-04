@@ -23,9 +23,9 @@ public final class tempFileCopy {
             
             do {
                 try data.write(to: url!) // assuming video is of Data type
-                debugPrint("Temp vid file created \(url!.absoluteString)")
+                debugPrint("tempFileCopy: Temp vid file created \(url!.absoluteString)")
             } catch let error as NSError {
-                debugPrint("Error: \(error.domain)")
+                debugPrint("tempFileCopy: Error: \(error.domain)")
                 return nil
             }
         } else {
@@ -36,9 +36,9 @@ public final class tempFileCopy {
     func deleteFile() {
         do {
             try FileManager.default.removeItem(at: url!)
-            debugPrint("Temp vid file remove \(url!.absoluteString)")
+            debugPrint("tempFileCopy: Temp vid file remove \(url!.absoluteString)")
         } catch let error as NSError {
-            debugPrint("Error: \(error.domain)")
+            debugPrint("tempFileCopy: Error: \(error.domain)")
         }
     }
     
@@ -47,4 +47,29 @@ public final class tempFileCopy {
             deleteFile()
         }
     }
+}
+
+func removeTempFiles() {
+    let fileManager = FileManager.default
+    let temporaryDirectory = fileManager.temporaryDirectory
+    try? fileManager
+        .contentsOfDirectory(at: temporaryDirectory, includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
+        .forEach { file in
+            try? fileManager.removeItem(atPath: file.path)
+        }
+}
+
+func getTempURL(lastURLComponent : String) -> URL {
+    // get the documents directory
+    let fileManager = FileManager.default
+    let temporaryDirectory = fileManager.temporaryDirectory
+    // create a target url where we will save our video
+    let tempURL = temporaryDirectory.appendingPathComponent(lastURLComponent)
+    
+    // if the file alreay existe=s there remove it
+    if FileManager.default.fileExists(atPath: tempURL.path) {
+        try? FileManager.default.removeItem(at: tempURL)
+    }
+    
+    return tempURL
 }
