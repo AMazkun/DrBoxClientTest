@@ -110,7 +110,7 @@ Useful [Dropbox API v2 documetation](https://www.dropbox.com/developers/document
 ## PushWoosh Notification SDK
 To integrate the Pushwoosh notification system you need:
 - Have a paid developer account
-- Generate a certificate and key for sending notifications
+- Generate a certificate and key for sending notifications [How to Configure Pushwoosh for iOS](https://success.outsystems.com/documentation/how_to_guides/integrations/how_to_configure_pushwoosh_for_ios/)
 - Register and get a test account on the [website https://www.pushwoosh.com/](https://www.pushwoosh.com/)
   - Register your application [Create your project](https://docs.pushwoosh.com/platform-docs/first-steps/start-with-your-project/create-your-project)
   - get the API SDK key and integrate it into your application 
