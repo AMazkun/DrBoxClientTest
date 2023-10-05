@@ -29,9 +29,10 @@ struct ShowVideo: View {
                 }
                 
                 VStack (alignment: .leading) {
-                    Text("File:").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    Text("File:").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundStyle(.white)
                     
                     Text(entry.name).font(.headline)
+                        .foregroundStyle(.white)
                         .minimumScaleFactor(0.4).lineLimit(1)
                         .scaledToFit()
                     

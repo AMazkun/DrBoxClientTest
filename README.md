@@ -86,7 +86,12 @@ https://github.com/kean/pulseLogHandler.git
 
 https://github.com/kean/pulse.git
 
+PushWoosh SDK integration
+https://github.com/Pushwoosh/Pushwoosh-XCFramework
 
+### Useful screen shots
+[Setup moments](https://github.com/AMazkun/DrBoxClientTest/tree/main/SetupScreens)
+[Pushwoosh SDK](https://github.com/AMazkun/DrBoxClientTest/tree/main/PushWoosh)
 ## Basic Dropbox HTTP API client
 - Authorize access
 - List folder
@@ -125,3 +130,6 @@ Known issues:
 
 [Test done on current commit 2023-10-03: screenshot](https://github.com/AMazkun/DrBoxClientTest/blob/main/Screenshot%202023-10-03%20at%2018.12.01.jpg)
 
+| photo detail                                                           | video detail                                                           | share                                                                  |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8858.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8866.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8871.jpg) |
