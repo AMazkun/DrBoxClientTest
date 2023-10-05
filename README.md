@@ -108,6 +108,11 @@ https://github.com/Pushwoosh/Pushwoosh-XCFramework
 Useful [Dropbox API v2 documetation](https://www.dropbox.com/developers/documentation/http/documentation)
 
 ## PushWoosh Notification SDK
+
+| notification                                                           |                                                                        | url redirection for test device - do not work                          |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/Pushwoosh/IMG_8883.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/Pushwoosh/IMG_8885.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/Pushwoosh/IMG_8886.jpg) |
+
 To integrate the Pushwoosh notification system you need:
 - Have a paid developer account
 - Generate a certificate and key for sending notifications [How to Configure Pushwoosh for iOS](https://success.outsystems.com/documentation/how_to_guides/integrations/how_to_configure_pushwoosh_for_ios/)
