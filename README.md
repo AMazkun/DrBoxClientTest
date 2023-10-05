@@ -109,9 +109,9 @@ Useful [Dropbox API v2 documetation](https://www.dropbox.com/developers/document
 
 ## PushWoosh Notification SDK
 
-| notification                                                           |                                                                        | url redirection for test device - do not work                          |
+| notification                                                           |  notification                                                          | url redirection for test device - do not work                          |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/PushWoosh/IMG_8883.jpeg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/PushWoosh/IMG_8885.jpeg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/PushWoosh/IMG_8886.jpeg) |
+| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/PushWoosh/IMG_8883.jpeg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/PushWoosh/IMG_8885.jpeg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/PushWoosh/IMG_8887.jpeg) |
 
 To integrate the Pushwoosh notification system you need:
 - Have a paid developer account
