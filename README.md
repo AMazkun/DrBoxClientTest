@@ -98,10 +98,26 @@ https://github.com/kean/pulse.git
 Useful [Dropbox API v2 documetation](https://www.dropbox.com/developers/documentation/http/documentation)
 
 ## PushWoosh Notification SDK
+To integrate the Pushwoosh notification system you need:
+- Have a paid developer account
+- Generate a certificate and key for sending notifications
+- Register and get a test account on the [website https://www.pushwoosh.com/](https://www.pushwoosh.com/)
+  - Register your application [Create your project](https://docs.pushwoosh.com/platform-docs/first-steps/start-with-your-project/create-your-project)
+  - get the API SDK key and integrate it into your application 
+  - integrate into the application SDK [Swift Package Manager Setup](https://docs.pushwoosh.com/platform-docs/pushwoosh-sdk/ios-push-notifications/setting-up-pushwoosh-ios-sdk/swift-package-manager-setup)
+Instructions on the SDK website, screenshots in the Pushwoosh package of the project
+### Known Problems:
+Failed to automatically register the test device: after scanning the QR Code URL Shema redirect to the application works and... silence
 
+### How to remove PushWoosh Notification SDK
+If you don't like to get deal with them, just:
+- remove Pushwoosh SDK packege from project
+- remove Notification taget and clear (remove AppDelegate.swift)
+- remove App Target Capabilities see screenshots in Pushwoosh catalog here
+- remove Info.plist Pushwoosh API key
 
 ## Tests / UI Tests
-Some tests done, please check
+Some tests SDK recomended done, please check
 
 Known issues:
 - depends on you account at Drop Box

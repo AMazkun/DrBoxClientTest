@@ -14,7 +14,6 @@ import SwiftUI
 struct App: SwiftUI.App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
 
-
     init() {
         LoggingSystem.bootstrap(PersistentLogHandler.init)
         Experimental.URLSessionProxy.shared.isEnabled = true
