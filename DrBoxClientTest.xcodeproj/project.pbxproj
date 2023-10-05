@@ -41,6 +41,8 @@
 		841814ED2ACC336E00560C88 /* ShowVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64182AC9DB9C00AACB28 /* ShowVideo.swift */; };
 		841814F52ACC337900560C88 /* UIActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A7832ACAAD1600D08070 /* UIActivityViewController.swift */; };
 		841814F62ACC337900560C88 /* PHImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF08C2ACB2E40002CAC93 /* PHImagePicker.swift */; };
+		8420DA592ACDE06900B141D9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420DA582ACDE06900B141D9 /* NotificationService.swift */; };
+		8420DA5D2ACDE06900B141D9 /* Notification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8420DA562ACDE06900B141D9 /* Notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		844EABF12ACC40FB0080044B /* DeleteFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EABED2ACC40FB0080044B /* DeleteFileTests.swift */; };
 		844EABF32ACC40FB0080044B /* ListFolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EABEF2ACC40FB0080044B /* ListFolderTests.swift */; };
 		844EABF42ACC40FB0080044B /* UploadFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EABF02ACC40FB0080044B /* UploadFileTests.swift */; };
@@ -71,6 +73,9 @@
 		848F890B2AC6E97A004589ED /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F89092AC6E97A004589ED /* ImageProvider.swift */; };
 		848F890D2AC74115004589ED /* AsyncImageOwn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F890C2AC74115004589ED /* AsyncImageOwn.swift */; };
 		848F890E2AC74115004589ED /* AsyncImageOwn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F890C2AC74115004589ED /* AsyncImageOwn.swift */; };
+		849F45A42ACDE8F1004FE2BA /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = 849F45A32ACDE8F1004FE2BA /* Pushwoosh */; };
+		849F45A62ACDE91F004FE2BA /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = 849F45A52ACDE91F004FE2BA /* Pushwoosh */; };
+		849F45A82ACDEC16004FE2BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F45A72ACDEC16004FE2BA /* AppDelegate.swift */; };
 		84B3C4392ACAE09A009A7E1E /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3C4382ACAE09A009A7E1E /* FileSystem.swift */; };
 		84C5A7802ACA95B000D08070 /* playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A77F2ACA95B000D08070 /* playground.swift */; };
 		84C5A7842ACAAD1600D08070 /* UIActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A7832ACAAD1600D08070 /* UIActivityViewController.swift */; };
@@ -105,6 +110,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8420DA5B2ACDE06900B141D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 848F88A92AC6C3F1004589ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8420DA552ACDE06900B141D9;
+			remoteInfo = Notification;
+		};
 		844EABFF2ACC42360080044B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 848F88A92AC6C3F1004589ED /* Project object */;
@@ -121,12 +133,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8420DA612ACDE06900B141D9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8420DA5D2ACDE06900B141D9 /* Notification.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		841814412ACC0D8D00560C88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		841814AC2ACC32D000560C88 /* DownloadFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadFileTests.swift; sourceTree = "<group>"; };
 		841814AD2ACC32D000560C88 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		841814AE2ACC32D000560C88 /* GetMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMetadataTests.swift; sourceTree = "<group>"; };
 		841814F92ACC357400560C88 /* DrBoxClientTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DrBoxClientTest.xctestplan; sourceTree = SOURCE_ROOT; };
+		8420DA4D2ACDDF1300B141D9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8420DA512ACDDFB600B141D9 /* DrBoxClientTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrBoxClientTest.entitlements; sourceTree = "<group>"; };
+		8420DA562ACDE06900B141D9 /* Notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8420DA582ACDE06900B141D9 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		8420DA5A2ACDE06900B141D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844EABED2ACC40FB0080044B /* DeleteFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteFileTests.swift; sourceTree = "<group>"; };
 		844EABEF2ACC40FB0080044B /* ListFolderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFolderTests.swift; sourceTree = "<group>"; };
 		844EABF02ACC40FB0080044B /* UploadFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFileTests.swift; sourceTree = "<group>"; };
@@ -154,6 +185,7 @@
 		848F88FA2AC6E398004589ED /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		848F89092AC6E97A004589ED /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		848F890C2AC74115004589ED /* AsyncImageOwn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageOwn.swift; sourceTree = "<group>"; };
+		849F45A72ACDEC16004FE2BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B3C4382ACAE09A009A7E1E /* FileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		84C5A77F2ACA95B000D08070 /* playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playground.swift; sourceTree = "<group>"; };
 		84C5A7832ACAAD1600D08070 /* UIActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +215,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8420DA532ACDE06900B141D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849F45A62ACDE91F004FE2BA /* Pushwoosh in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		844EABF62ACC42360080044B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848F88E62AC6C6AB004589ED /* Dependencies in Frameworks */,
+				849F45A42ACDE8F1004FE2BA /* Pushwoosh in Frameworks */,
 				848F88E32AC6C5CD004589ED /* PulseUI in Frameworks */,
 				848F88E02AC6C537004589ED /* PulseLogHandler in Frameworks */,
 			);
@@ -210,6 +251,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8420DA4C2ACDDF1300B141D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8420DA4D2ACDDF1300B141D9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8420DA572ACDE06900B141D9 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				8420DA582ACDE06900B141D9 /* NotificationService.swift */,
+				8420DA5A2ACDE06900B141D9 /* Info.plist */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		8449D9762ACB568000394781 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +316,9 @@
 				841814F92ACC357400560C88 /* DrBoxClientTest.xctestplan */,
 				848F88C42AC6C3F2004589ED /* DrBoxClientTestTests */,
 				844EABFA2ACC42360080044B /* DrBoxClientUITests */,
+				8420DA572ACDE06900B141D9 /* Notification */,
 				848F88B22AC6C3F1004589ED /* Products */,
+				8420DA4C2ACDDF1300B141D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +328,7 @@
 				848F88B12AC6C3F1004589ED /* DrBoxClientTest.app */,
 				848F88C12AC6C3F2004589ED /* DrBoxClientTestTests.xctest */,
 				844EABF92ACC42360080044B /* DrBoxClientUITests.xctest */,
+				8420DA562ACDE06900B141D9 /* Notification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,9 +336,11 @@
 		848F88B32AC6C3F1004589ED /* DrBoxClientTest */ = {
 			isa = PBXGroup;
 			children = (
+				8420DA512ACDDFB600B141D9 /* DrBoxClientTest.entitlements */,
 				84D8B2A42AC7626700524721 /* DropboxClient */,
 				848F88F52AC6CD8F004589ED /* Info.plist */,
 				848F88B42AC6C3F1004589ED /* DrBoxClientTestApp.swift */,
+				849F45A72ACDEC16004FE2BA /* AppDelegate.swift */,
 				848F88F92AC6E398004589ED /* Images */,
 				848F88EA2AC6C70C004589ED /* Views */,
 				848F88F12AC6C9E6004589ED /* Model */,
@@ -373,6 +436,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8420DA552ACDE06900B141D9 /* Notification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8420DA5E2ACDE06900B141D9 /* Build configuration list for PBXNativeTarget "Notification" */;
+			buildPhases = (
+				8420DA522ACDE06900B141D9 /* Sources */,
+				8420DA532ACDE06900B141D9 /* Frameworks */,
+				8420DA542ACDE06900B141D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notification;
+			packageProductDependencies = (
+				849F45A52ACDE91F004FE2BA /* Pushwoosh */,
+			);
+			productName = Notification;
+			productReference = 8420DA562ACDE06900B141D9 /* Notification.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		844EABF82ACC42360080044B /* DrBoxClientUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844EAC012ACC42360080044B /* Build configuration list for PBXNativeTarget "DrBoxClientUITests" */;
@@ -398,16 +481,19 @@
 				848F88AD2AC6C3F1004589ED /* Sources */,
 				848F88AE2AC6C3F1004589ED /* Frameworks */,
 				848F88AF2AC6C3F1004589ED /* Resources */,
+				8420DA612ACDE06900B141D9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8420DA5C2ACDE06900B141D9 /* PBXTargetDependency */,
 			);
 			name = DrBoxClientTest;
 			packageProductDependencies = (
 				848F88DF2AC6C537004589ED /* PulseLogHandler */,
 				848F88E22AC6C5CD004589ED /* PulseUI */,
 				848F88E52AC6C6AB004589ED /* Dependencies */,
+				849F45A32ACDE8F1004FE2BA /* Pushwoosh */,
 			);
 			productName = DrBoxClientTest;
 			productReference = 848F88B12AC6C3F1004589ED /* DrBoxClientTest.app */;
@@ -441,6 +527,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					8420DA552ACDE06900B141D9 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					844EABF82ACC42360080044B = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 848F88B02AC6C3F1004589ED;
@@ -467,6 +556,7 @@
 				848F88DE2AC6C537004589ED /* XCRemoteSwiftPackageReference "pulseLogHandler" */,
 				848F88E12AC6C5AA004589ED /* XCRemoteSwiftPackageReference "pulse" */,
 				848F88E42AC6C6AB004589ED /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				849F45A22ACDE8F1004FE2BA /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */,
 			);
 			productRefGroup = 848F88B22AC6C3F1004589ED /* Products */;
 			projectDirPath = "";
@@ -475,11 +565,19 @@
 				848F88B02AC6C3F1004589ED /* DrBoxClientTest */,
 				848F88C02AC6C3F2004589ED /* DrBoxClientTestTests */,
 				844EABF82ACC42360080044B /* DrBoxClientUITests */,
+				8420DA552ACDE06900B141D9 /* Notification */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8420DA542ACDE06900B141D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		844EABF72ACC42360080044B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +605,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8420DA522ACDE06900B141D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8420DA592ACDE06900B141D9 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		844EABF52ACC42360080044B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +644,7 @@
 				84D8B2BF2AC7626700524721 /* CurrentValueAsyncSequence.swift in Sources */,
 				84C5A7802ACA95B000D08070 /* playground.swift in Sources */,
 				84D8B2B92AC7626700524721 /* Coding.swift in Sources */,
+				849F45A82ACDEC16004FE2BA /* AppDelegate.swift in Sources */,
 				848F88EC2AC6C759004589ED /* SignUpSection.swift in Sources */,
 				84D8B2C32AC7626700524721 /* DateGenerator.swift in Sources */,
 				848F88EF2AC6C87F004589ED /* FilesSection.swift in Sources */,
@@ -620,6 +727,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8420DA5C2ACDE06900B141D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8420DA552ACDE06900B141D9 /* Notification */;
+			targetProxy = 8420DA5B2ACDE06900B141D9 /* PBXContainerItemProxy */;
+		};
 		844EAC002ACC42360080044B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 848F88B02AC6C3F1004589ED /* DrBoxClientTest */;
@@ -633,6 +745,56 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8420DA5F2ACDE06900B141D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL4AH9RNPQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Notification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maa.DrBoxClientTest.Notification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8420DA602ACDE06900B141D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL4AH9RNPQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Notification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maa.DrBoxClientTest.Notification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		844EAC022ACC42360080044B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -793,8 +955,10 @@
 		848F88D62AC6C3F2004589ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DrBoxClientTest/DrBoxClientTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DrBoxClientTest/Preview Content\"";
@@ -812,7 +976,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maa.DrBoxClientTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -823,8 +987,10 @@
 		848F88D72AC6C3F2004589ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DrBoxClientTest/DrBoxClientTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DrBoxClientTest/Preview Content\"";
@@ -842,7 +1008,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = maa.DrBoxClientTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maa.DrBoxClientTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -893,6 +1059,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8420DA5E2ACDE06900B141D9 /* Build configuration list for PBXNativeTarget "Notification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8420DA5F2ACDE06900B141D9 /* Debug */,
+				8420DA602ACDE06900B141D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		844EAC012ACC42360080044B /* Build configuration list for PBXNativeTarget "DrBoxClientUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -956,6 +1131,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		849F45A22ACDE8F1004FE2BA /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Pushwoosh/Pushwoosh-XCFramework";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -973,6 +1156,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 848F88E42AC6C6AB004589ED /* XCRemoteSwiftPackageReference "swift-dependencies" */;
 			productName = Dependencies;
+		};
+		849F45A32ACDE8F1004FE2BA /* Pushwoosh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849F45A22ACDE8F1004FE2BA /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */;
+			productName = Pushwoosh;
+		};
+		849F45A52ACDE91F004FE2BA /* Pushwoosh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849F45A22ACDE8F1004FE2BA /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */;
+			productName = Pushwoosh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

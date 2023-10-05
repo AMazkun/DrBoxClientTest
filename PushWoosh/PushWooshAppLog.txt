@@ -1,0 +1,39 @@
+Pushwoosh: Initializing application runtime
+[PW] HWID: 9CF19444-FB2F-4460-A8F6-4C351AF9B2AC
+[PW] [I] -[Pushwoosh] Will show foreground notifications: 1
+[PW] [I] -[PWRequestManager] 
+x
+|    Pushwoosh request:
+| Url:      https://0DCDD-B7B9C.api.pushwoosh.com/json/1.3/applicationOpen
+| Payload:  {"request":{"scheduled_summary":false,"notificationTypes":0,"app_version":"1.0","application":"0DCDD-B7B9C","device_type":1,"userId":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC","language":"en","hwid":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC","time_sensitive_notifications":false,"timezone":"10800","package":"com.maa.DrBoxClientTest","os_version":"17.0.3","v":"6.5.3","device_model":"iPhone14,3"}}
+| Status:   "200 no error"
+| Response: {"status_code":200,"status_message":"OK","response":{"required_inapps":{}}}
+x
+[PW] [D] -[PWDataManagerCommon] sending appOpen completed
+[PW] [I] -[PWRequestManager] 
+x
+|    Pushwoosh request:
+| Url:      https://0DCDD-B7B9C.api.pushwoosh.com/json/1.3/getInApps
+| Payload:  {"request":{"device_type":1,"language":"en","application":"0DCDD-B7B9C","userId":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC","v":"6.5.3","hwid":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC"}}
+| Status:   "200 no error"
+| Response: {"status_code":200,"status_message":"OK","response":{"inApps":[]}}
+x
+[PW] [I] -[PWRequestManager] 
+x
+|    Pushwoosh request:
+| Url:      https://0DCDD-B7B9C.api.pushwoosh.com/json/1.3/getTags
+| Payload:  {"request":{"device_type":1,"application":"0DCDD-B7B9C","userId":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC","v":"6.5.3","hwid":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC"}}
+| Status:   "200 no error"
+| Response: {"status_code":200,"status_message":"OK","response":{"result":{"Application Version":"1.0.0.0","City":"ua, kyiv","Country":"ua","Device Model":"iPhone14,3","First Install":1696442400,"Language":"en","Last Application Open":1696482000,"OS Version":"17.0.3.0","Push Alerts Enabled":0,"SDK Version":"6.5.3.0","Scheduled Summary":0,"Time Sensitive Notifications":0,"Timezone":10800}}}
+x
+[PW] [D] -[PWDataManagerCommon] loadTags completed
+[PW] [I] -[PWRequestManager] 
+x
+|    Pushwoosh request:
+| Url:      https://0DCDD-B7B9C.api.pushwoosh.com/json/1.3/getConfig
+| Payload:  {"request":{"device_type":1,"features":["channels","events"],"application":"0DCDD-B7B9C","userId":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC","v":"6.5.3","hwid":"9CF19444-FB2F-4460-A8F6-4C351AF9B2AC"}}
+| Status:   "200 no error"
+| Response: {"status_code":200,"status_message":"OK","response":{"features":{"events":null}}}
+
+x
+[PW] [D] -[PWInAppMessagesManager] /registerUser with same id already sent this day

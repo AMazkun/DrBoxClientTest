@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "pushwoosh-xcframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Pushwoosh/Pushwoosh-XCFramework",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a12702873adeb598236c5c627061d8ff557ab2b2"
+      }
+    },
+    {
       "identity" : "swift-clocks",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-clocks",

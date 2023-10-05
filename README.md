@@ -8,6 +8,7 @@ Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-
 
 ## Features
 - Login with Drop Box API
+- PushWoosh Notification SDK Integration
 
 - Browse files in your account
   - style: continuous feed, thumbnails
@@ -25,6 +26,8 @@ Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-
 - File Detail View
   - Image: Pan and Zoom View, Share
   - Video: Autostart, Infinite loop play, Share
+
+## Known issues
 
 ## Technical stack
 - Architect MP(x), sorry
@@ -93,6 +96,9 @@ https://github.com/kean/pulse.git
 - Delete file
 
 Useful [Dropbox API v2 documetation](https://www.dropbox.com/developers/documentation/http/documentation)
+
+## PushWoosh Notification SDK
+
 
 ## Tests / UI Tests
 Some tests done, please check
