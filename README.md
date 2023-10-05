@@ -2,9 +2,14 @@
 Simple SwiftUI app to test DropBox Client SDK
 Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-client)
 
-| home                                                                      | load                                                                      | detail                                                                    |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8859.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8857.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8858.jpg) |
+| home                                                                   | net tasks info                                                         | incremetal feed download                                               |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8859.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8857.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8854.jpg) |
+
+
+| photo detail                                                           | video detail                                                           | share                                                                  |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8858.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8866.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8871.jpg) |
 
 ## Features
 - Login with Drop Box API
@@ -129,7 +134,3 @@ Known issues:
 - not all tests running on enulyator 
 
 [Test done on current commit 2023-10-03: screenshot](https://github.com/AMazkun/DrBoxClientTest/blob/main/Screenshot%202023-10-03%20at%2018.12.01.jpg)
-
-| photo detail                                                           | video detail                                                           | share                                                                  |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8858.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8866.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8871.jpg) |
