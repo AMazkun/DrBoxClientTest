@@ -61,7 +61,7 @@ struct ShowVideo: View {
                 HStack (alignment: .firstTextBaseline) {
                     Spacer()
                     Button { self.isExifPresented = true }
-                label: { Label("Exif", systemImage: "camera") }
+                label: { Label("Exif", systemImage: "video.fill") }
                         .sheet(isPresented: $isExifPresented, onDismiss: {
                             print("Dismiss")
                         }, content: {

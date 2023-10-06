@@ -13,12 +13,13 @@ public struct videoMetadata: Sendable {
 }
 
 public class CashedImage {
-    internal init(data: Data? = nil, file_metadata: [String : Any]?, fileType: String = "", fileSize: Int = -1, tempFile: tempFileCopy? = nil ) {
+    internal init(data: Data? = nil, file_metadata: [String : Any]?, fileType: String = "", fileSize: Int = -1, tempFile: tempFileCopy? = nil, fileName: String = "" ) {
         self.data = data
         self.file_metadata = file_metadata
         self.fileType = fileType
         self.fileSize = fileSize
         self.tempFile = tempFile
+        self.fileName = fileName
     }
     
     public var data: Data?
@@ -27,6 +28,7 @@ public class CashedImage {
     public var fileSize : Int = -1
     public var tempFile : tempFileCopy? = nil
     public var meta: NSDictionary?
+    private var fileName : String = ""
     
     public var exif : NSDictionary? {
         get {
@@ -40,19 +42,11 @@ public class CashedImage {
         }
     }
     
-    //    func assetLoad(callback: @escaping (String) -> Any) {
-    //        Task {
-    //            let result = await asset.load(.availableMetadataFormats)
-    //            callback(result)
-    //        }
-    //    }
-    
-    
     private func photoExif() -> NSDictionary? {
         if let data = self.data {
             if let imageSource = CGImageSourceCreateWithData(data as CFData, nil) {
-                if let imageProperties2 = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil) as NSDictionary? {
-                    return imageProperties2
+                if let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil) as NSDictionary? {
+                    return imageProperties
                 }
             }
         }
@@ -87,6 +81,7 @@ public class CashedImage {
             
             Task{
                 let meta: NSMutableDictionary = NSMutableDictionary()
+                meta["FILE"] = fileName
                 
                 let duration = try? await asset.load(.duration)
                 meta["Duration"] = String(format: "%.1f s", duration!.seconds)

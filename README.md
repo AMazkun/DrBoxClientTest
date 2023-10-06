@@ -11,6 +11,11 @@ Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8858.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8866.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8871.jpg) |
 
+
+| photo exif                                                             | video metadata                                                         | push notifications                                                     |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8872.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8873.jpg) | ![](https://github.com/AMazkun/DrBoxClientTest/blob/main/IMG_8889.jpg) |
+
 ## Features
 - Login with Drop Box API
 - PushWoosh Notification SDK Integration

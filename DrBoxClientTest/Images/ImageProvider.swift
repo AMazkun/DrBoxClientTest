@@ -107,7 +107,7 @@ class ImageProvider: ObservableObject {
                 
                 
                 DispatchQueue.main.async { [self] in
-                    self.data = CashedImage(data: data, file_metadata: file_metadata, fileType: fileType, fileSize: fileSize)
+                    self.data = CashedImage(data: data, file_metadata: file_metadata, fileType: fileType, fileSize: fileSize, fileName: entry.name)
                     cache[URL(string: entry.id)!] = self.data
                 }
             } catch {
