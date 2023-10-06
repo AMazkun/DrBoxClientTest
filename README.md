@@ -34,8 +34,15 @@ Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-
   - Share file (Data Representation issues, not critical)
 
 - File Detail View
-  - Image: Pan and Zoom View, Share
-  - Video: Autostart, Infinite loop play, Share
+  - Image: 
+    - Pan and Zoom View
+    - Share 
+    - Exif, GPS, TIFF metadata
+  - Video: 
+    - Autostart
+    - Infinite loop play
+    - Share
+    - Video Metadata
 
 ## Known issues
 
