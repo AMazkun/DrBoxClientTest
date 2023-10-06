@@ -73,6 +73,7 @@
 		848F890B2AC6E97A004589ED /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F89092AC6E97A004589ED /* ImageProvider.swift */; };
 		848F890D2AC74115004589ED /* AsyncImageOwn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F890C2AC74115004589ED /* AsyncImageOwn.swift */; };
 		848F890E2AC74115004589ED /* AsyncImageOwn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F890C2AC74115004589ED /* AsyncImageOwn.swift */; };
+		849EB9BD2AD039AC009A2C30 /* CashedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EB9BC2AD039AC009A2C30 /* CashedImage.swift */; };
 		849F45A42ACDE8F1004FE2BA /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = 849F45A32ACDE8F1004FE2BA /* Pushwoosh */; };
 		849F45A62ACDE91F004FE2BA /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = 849F45A52ACDE91F004FE2BA /* Pushwoosh */; };
 		849F45A82ACDEC16004FE2BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F45A72ACDEC16004FE2BA /* AppDelegate.swift */; };
@@ -80,6 +81,10 @@
 		84C5A7802ACA95B000D08070 /* playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A77F2ACA95B000D08070 /* playground.swift */; };
 		84C5A7842ACAAD1600D08070 /* UIActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A7832ACAAD1600D08070 /* UIActivityViewController.swift */; };
 		84C5A7862ACACFC900D08070 /* TempFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5A7852ACACFC900D08070 /* TempFiles.swift */; };
+		84D4D1032ACF444C00576C9C /* ExifDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4D1022ACF444C00576C9C /* ExifDataView.swift */; };
+		84D4D1042ACF68BA00576C9C /* ExifDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4D1022ACF444C00576C9C /* ExifDataView.swift */; };
+		84D4D1052ACF68BB00576C9C /* ExifDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4D1022ACF444C00576C9C /* ExifDataView.swift */; };
+		84D4D1062ACF68E600576C9C /* ShowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B64162AC9DA1D00AACB28 /* ShowImage.swift */; };
 		84D7AC192ACA11DB006D407C /* ZoomaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7AC182ACA11DB006D407C /* ZoomaScrollView.swift */; };
 		84D8B2A32AC75F4D00524721 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B2A22AC75F4D00524721 /* GetThumbnail.swift */; };
 		84D8B2B82AC7626700524721 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B2A52AC7626700524721 /* Metadata.swift */; };
@@ -185,11 +190,13 @@
 		848F88FA2AC6E398004589ED /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		848F89092AC6E97A004589ED /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		848F890C2AC74115004589ED /* AsyncImageOwn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageOwn.swift; sourceTree = "<group>"; };
+		849EB9BC2AD039AC009A2C30 /* CashedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashedImage.swift; sourceTree = "<group>"; };
 		849F45A72ACDEC16004FE2BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B3C4382ACAE09A009A7E1E /* FileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		84C5A77F2ACA95B000D08070 /* playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playground.swift; sourceTree = "<group>"; };
 		84C5A7832ACAAD1600D08070 /* UIActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityViewController.swift; sourceTree = "<group>"; };
 		84C5A7852ACACFC900D08070 /* TempFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFiles.swift; sourceTree = "<group>"; };
+		84D4D1022ACF444C00576C9C /* ExifDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifDataView.swift; sourceTree = "<group>"; };
 		84D7AC182ACA11DB006D407C /* ZoomaScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomaScrollView.swift; sourceTree = "<group>"; };
 		84D8B2A22AC75F4D00524721 /* GetThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThumbnail.swift; sourceTree = "<group>"; };
 		84D8B2A52AC7626700524721 /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
@@ -285,6 +292,7 @@
 			children = (
 				847B64162AC9DA1D00AACB28 /* ShowImage.swift */,
 				847B64182AC9DB9C00AACB28 /* ShowVideo.swift */,
+				84D4D1022ACF444C00576C9C /* ExifDataView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -402,6 +410,7 @@
 				848F890C2AC74115004589ED /* AsyncImageOwn.swift */,
 				847B641F2AC9F13400AACB28 /* AsyncFullImage.swift */,
 				84D7AC182ACA11DB006D407C /* ZoomaScrollView.swift */,
+				849EB9BC2AD039AC009A2C30 /* CashedImage.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -618,6 +627,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				844EABFC2ACC42360080044B /* DrBoxClientUITests.swift in Sources */,
+				84D4D1052ACF68BB00576C9C /* ExifDataView.swift in Sources */,
+				84D4D1062ACF68E600576C9C /* ShowImage.swift in Sources */,
 				844EABFE2ACC42360080044B /* DrBoxClientUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +639,7 @@
 			files = (
 				84B3C4392ACAE09A009A7E1E /* FileSystem.swift in Sources */,
 				84D8B2BD2AC7626700524721 /* UploadFile.swift in Sources */,
+				84D4D1032ACF444C00576C9C /* ExifDataView.swift in Sources */,
 				84D8B2C62AC7626700524721 /* HTTPClient.swift in Sources */,
 				848F890A2AC6E97A004589ED /* ImageProvider.swift in Sources */,
 				84D8B2CA2AC7626700524721 /* Credentials.swift in Sources */,
@@ -652,6 +664,7 @@
 				84D8B2C72AC7626700524721 /* Keychain.swift in Sources */,
 				847B64202AC9F13400AACB28 /* AsyncFullImage.swift in Sources */,
 				84D8B2BA2AC7626700524721 /* FileMetadata.swift in Sources */,
+				849EB9BD2AD039AC009A2C30 /* CashedImage.swift in Sources */,
 				84C5A7862ACACFC900D08070 /* TempFiles.swift in Sources */,
 				848F88F32AC6CA1D004589ED /* Dependencies.swift in Sources */,
 				847B64192AC9DB9C00AACB28 /* ShowVideo.swift in Sources */,
@@ -675,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D4D1042ACF68BA00576C9C /* ExifDataView.swift in Sources */,
 				841814E92ACC336E00560C88 /* ListItem.swift in Sources */,
 				841814DC2ACC335100560C88 /* ZoomaScrollView.swift in Sources */,
 				848F89002AC6E398004589ED /* ImageCache.swift in Sources */,
@@ -966,6 +980,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DrBoxClientTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drop Box Browser";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -998,6 +1013,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DrBoxClientTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drop Box Browser";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

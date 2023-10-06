@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Photos
 
 struct Alert: Equatable {
     var title: String
@@ -31,6 +32,7 @@ func doEncodeAA(input : Encodable) -> String{
     }
     return ""
 }
+
 
 //extension
 extension Dictionary where Key: Hashable, Value: Any {

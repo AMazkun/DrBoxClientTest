@@ -2,20 +2,6 @@ import Foundation
 import UIKit.UIImage
 import Combine
 
-public class CashedImage {
-    internal init(data: Data? = nil, file_metadata: [String : Any]?, fileType: String = "", fileSize: Int = -1) {
-        self.data = data
-        self.file_metadata = file_metadata
-        self.fileType = fileType
-        self.fileSize = fileSize
-    }
-    
-    public var data: Data?
-    public var file_metadata : [String : Any]?
-    public var fileType: String = ""
-    public var fileSize : Int = -1
-}
-
 // Declares in-memory image cache
 public protocol DataCacheType: AnyObject {
     // Returns the image associated with a given url
