@@ -28,7 +28,7 @@ public class CashedImage {
     public var fileSize : Int = -1
     public var tempFile : tempFileCopy? = nil
     public var meta: NSDictionary?
-    private var fileName : String = ""
+    public var fileName : String = ""
     
     public var exif : NSDictionary? {
         get {

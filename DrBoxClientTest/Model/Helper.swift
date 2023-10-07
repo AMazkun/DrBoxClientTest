@@ -35,6 +35,13 @@ func doEncodeAA(input : Encodable) -> String{
 
 
 //extension
+extension String {
+    func contains(_ strings: [String]) -> Bool {
+        strings.contains { contains($0) }
+    }
+}
+
+
 extension Dictionary where Key: Hashable, Value: Any {
     func getValue(forKeyPath components : Array<Any>) -> Any? {
         var comps = components;

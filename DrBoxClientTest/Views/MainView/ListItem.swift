@@ -40,26 +40,20 @@ struct ListItem: View {
                 // browsing folders
                     .onTapGesture {
                         if (loader.data != nil) {
-                            if entry.tag.rawValue == "folder" {
+                            if loader.isFolder {
                                 getFolder(entry)
                                 return
                             }
-                            if loader.data!.fileType == "photo" || loader.data!.fileType == "video"{
+                            if loader.isPicrure || loader.isVideo {
                                 self.showingDetail.toggle()
                             }
                         }
                     }
                 // details
                     .sheet(isPresented: $showingDetail) {
-                        if loader.data!.fileType == "photo" {
-                            ShowImage(entry: entry)
-                            
+                        if loader.isPicrure { ShowImage(entry: entry)
                         } else {
-                            
-                            if loader.data!.fileType == "video"{
-                                ShowVideo(entry: entry)
-                            }
-                        }
+                        if loader.isVideo   { ShowVideo(entry: entry) } }
                     }
                 
                 // if file metadata exists

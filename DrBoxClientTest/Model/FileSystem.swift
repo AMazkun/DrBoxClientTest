@@ -21,16 +21,26 @@ func getSuggestedExtention(_ item : NSItemProvider) -> String {
     return _ext
 }
 
-func getUploadFilename(item : NSItemProvider) -> String {
+func getUploadFilename(item : NSItemProvider, tmpUrl: String = "") -> String {
     
     var name : String = item.suggestedName ?? "no_name"
-    let ext = getSuggestedExtention(item)
-    let words = name.components(separatedBy: ".")
-    if let last = words.last, last == ext {
-    } else {
-        name = name + "." + ext
+    var ext = getSuggestedExtention(item)
+
+    let  words1 = name.components(separatedBy: ".")
+    if words1.count == 2, let last1 = words1.last, last1.lowercased() != ext {
+        ext = last1
     }
-    let res = name.replacingOccurrences(of: "/", with: "-")
+
+    let words2 = tmpUrl.components(separatedBy: ".")
+    if words2.count == 2, let last2 = words2.last, last2 != "" {
+        ext =  last2
+    }
+
+//    if words2.count == 2 {
+//        return tmpUrl
+//    }
+//
+    let res = name.replacingOccurrences(of: "/", with: "-") + "." + ext
 
     debugPrint("Suggested FileName: name: \(res)")
     return res

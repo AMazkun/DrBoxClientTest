@@ -405,12 +405,12 @@
 		848F88F92AC6E398004589ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				849EB9BC2AD039AC009A2C30 /* CashedImage.swift */,
 				848F88FA2AC6E398004589ED /* ImageCache.swift */,
 				848F89092AC6E97A004589ED /* ImageProvider.swift */,
 				848F890C2AC74115004589ED /* AsyncImageOwn.swift */,
 				847B641F2AC9F13400AACB28 /* AsyncFullImage.swift */,
 				84D7AC182ACA11DB006D407C /* ZoomaScrollView.swift */,
-				849EB9BC2AD039AC009A2C30 /* CashedImage.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";

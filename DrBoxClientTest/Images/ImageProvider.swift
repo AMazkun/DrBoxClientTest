@@ -18,6 +18,39 @@ class ImageProvider: ObservableObject {
     @Published var data : CashedImage?
     public var entry: Metadata
     
+    public var isFolder: Bool {
+        get {return entry.tag.rawValue == "folder"}
+    }
+
+    public var isPicrure: Bool {
+        get {
+            if let fileType = data?.fileType {
+                if fileType == "photo" { return true }
+                if fileType == "" {
+                    let words = entry.name.split(separator: ".")
+                    let vidExt = ["jpg", "jpeg", "bmp", "png"]
+                    if words.count > 1, let ext = words.last?.lowercased() , ext.contains(vidExt) { return true }
+                }
+            }
+            return false
+        }
+    }
+
+    public var isVideo: Bool {
+        get {
+            if let fileType = data?.fileType {
+                if fileType == "video" { return true }
+                if fileType == "" {
+                    let words = entry.name.split(separator: ".")
+                    let vidExt = ["mp4", "mov", "ts", "m4v"]
+                    if words.count > 1, let ext = words.last?.lowercased() , ext.contains(vidExt) { return true }
+                }
+            }
+            return false
+        }
+    }
+
+    
     func loadThumbnail() {
         
         if let downloadable = entry.isDownloadable, !downloadable {

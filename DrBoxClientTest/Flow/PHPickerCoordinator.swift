@@ -104,7 +104,7 @@ class Coordinator: NSObject, PHPickerViewControllerDelegate {
                 
                 DispatchQueue.main.async {
                     // set video so it appears on the view
-                    let uploadFileName = getUploadFilename(item: itemProvider)
+                    let uploadFileName = getUploadFilename(item: itemProvider, tmpUrl: url.lastPathComponent)
                     let data = NSData(contentsOf: tempURL)
                     debugPrint("PhotoPicker: loadVideo uploadFileName: \(uploadFileName)")
                     debugPrint("PhotoPicker: loadVideo data: ", data?.length as Any)
