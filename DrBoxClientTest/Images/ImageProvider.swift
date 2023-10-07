@@ -103,6 +103,8 @@ class ImageProvider: ObservableObject {
                     self.data = CashedImage(data: data, file_metadata: file_metadata, fileType: fileType, fileSize: fileSize)
                     cache[URL(string: String("th:+\(entry.id)"))!] = self.data
                 }
+                
+                debugPrint(cache)
             } catch {
                 log.error("DownloadFile failure", metadata: [
                     "error": "\(error)",
@@ -111,7 +113,34 @@ class ImageProvider: ObservableObject {
             }
         }
     }
+    
+    
+    func loadMokeVideo() {
+        // ***************** ATTENTION ***************************
+        // ***************** ABSOLUTE URL ************************
+        let url = URL(string: "/Users/admin/Movies/boxer.mp4")
+        var data : Data?
+        do {
+            debugPrint("loadFull Moke Video : \(url!.absoluteString)")
+            data = try Data(contentsOf: url!) // assuming video is of Data type
+        } catch let error as NSError {
+            debugPrint("loadFull Moke Video Error: \(error.domain)")
+        }
+        if data == nil {
+            debugPrint("loadFull Moke Video: No data")
+            return
+        }
+        DispatchQueue.main.async {
+            self.data = CashedImage(data: data, file_metadata: file_metadata, fileType: "video",
+                                    fileSize: data!.count, fileName: url!.lastPathComponent)
+        }
+        return
+    }
+    
     func loadFull() {
+        // get moke video for debug
+        if entry.pathLower == "****" {
+        }
         
         if entry.tag != Metadata.Tag.file {
             DispatchQueue.main.async {

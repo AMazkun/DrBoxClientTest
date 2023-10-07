@@ -23,7 +23,7 @@ func getSuggestedExtention(_ item : NSItemProvider) -> String {
 
 func getUploadFilename(item : NSItemProvider, tmpUrl: String = "") -> String {
     
-    var name : String = item.suggestedName ?? "no_name"
+    let name : String = item.suggestedName ?? "no_name"
     var ext = getSuggestedExtention(item)
 
     let  words1 = name.components(separatedBy: ".")

@@ -14,6 +14,7 @@ struct ListItem: View {
     @StateObject var loader: ImageProvider
     @Binding var alert: Alert?
     @State private var showingDetail = false
+    @State private var confirmDeletePreseting  = false
     
     
     var getFolder:      (_ : Metadata) ->()
@@ -30,6 +31,7 @@ struct ListItem: View {
         self.deleteEntry = deleteEntry
         self.getMetadataEntry = getMetadataEntry
         self.replaceEntry = replaceEntry
+        
         _loader = StateObject(wrappedValue: ImageProvider(entry: entry))
     }
     
@@ -80,12 +82,16 @@ struct ListItem: View {
                         
                         Spacer()
                         
-                        Button(role: .destructive) {
-                            deleteEntry(entry)
-                        } label: {
-                            Text("Delete")
-                        }
+                        Button("Delete", role: .destructive) {
+                            confirmDeletePreseting = true
+                         }
                         .buttonStyle(.borderless)
+                        .confirmationDialog("Are you sure?",
+                          isPresented: $confirmDeletePreseting) {
+                          Button("Delete item", role: .destructive) {
+                              deleteEntry(entry)
+                           }
+                         }
                         
                         Spacer()
                         
