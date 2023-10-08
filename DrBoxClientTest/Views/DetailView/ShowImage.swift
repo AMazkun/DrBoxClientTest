@@ -52,7 +52,7 @@ struct ShowImage: View {
                             .sheet(isPresented: $isExifPresented, onDismiss: {
                                 print("Dismiss")
                             }, content: {
-                                ExifDataView(items: exif)
+                                ExifDataView(items: exif, title: "IMAGE Data")
                             })
                     }
 

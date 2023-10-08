@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ExifDataView: View {
     let items: NSDictionary
+    let title: String
     
-    internal init(items: NSDictionary) {
+    internal init(items: NSDictionary, title: String = "File Information") {
         self.items = items
+        self.title = title
     }
     
     @ViewBuilder func KeyValueCell(Key : String, Value:  Optional<Any>) -> some View {
@@ -33,6 +35,7 @@ struct ExifDataView: View {
     
     var body: some View {
         List {
+            Text(title).fontWeight(.heavy)
             
             ForEach(items.allKeys.map{$0 as! String}, id: \.hashValue ) { Key in
                 if !Key.contains("MakerApple") {
@@ -51,7 +54,6 @@ struct ExifDataView: View {
                     }
                 }
             }
-            
         }
     }
     

@@ -76,16 +76,16 @@ func getParentFolder(_ folder: String) -> String {
 }
 
 func getDisplayParentFolder( _ folder: String) -> String {
-    if (folder == "na") {return "GET HOME LIST"}
+    if (folder == "na") {return "DROP BOX HOME"}
     if (folder == "/")  {return "HOME"}
     let res = getParentFolder(folder)
     return  "BACK " + res
 }
 
 func getDisplayFolder( _ folder: String) -> String {
-    if ( folder == "na") {return "Files"}
-    if ( folder == "/") {return "HOME Files"}
-    return "Files in: " + folder
+    if ( folder == "na") {return "Drop Box Files"}
+    if ( folder == "/") {return "BOX: HOME"}
+    return "BOX: " + folder
 }
 
 func fileSizeToDisplay(_ fileSize: Int) -> String {

@@ -33,7 +33,10 @@ extension AppView {
     func stopUploadTask() {
         DispatchQueue.main.async { [self] in
             uploadTasks -= 1
-            if uploadTasks == 0 {loadFolder()}
+            if uploadTasks == 0 {
+                loadFolder()
+                uploadTasksDone = true
+            }
         }
     }
     
@@ -77,54 +80,39 @@ extension AppView {
         }
     }
     
+    func loadParentFolder() {
+        Task<Void, Never> {
+            startNetTask()
+            do {
+                let parentFolder = getParentFolder(folder)
+                // lol
+                list = try await client.listFolder(path: (parentFolder == "/" ? "" : parentFolder))
+                folder = parentFolder;
+            } catch {
+                log.error("ListFolder failure", metadata: [
+                    "error": "\(error)",
+                    "localizedDescription": "\(error.localizedDescription)"
+                ])
+            }
+            stopNetTask()
+        }
+    }
+    
     @ViewBuilder
     var FilesSection: some View {
         
         Section(getDisplayFolder(folder)) {
-            if !itsRoot(folder) {
-                Button {
-                    Task<Void, Never> {
-                        startNetTask()
-                        do {
-                            let parentFolder = getParentFolder(folder)
-                            // lol
-                            list = try await client.listFolder(path: (parentFolder == "/" ? "" : parentFolder))
-                            folder = parentFolder;
-                        } catch {
-                            log.error("ListFolder failure", metadata: [
-                                "error": "\(error)",
-                                "localizedDescription": "\(error.localizedDescription)"
-                            ])
-                        }
-                        stopNetTask()
+            
+            if let list {
+                if list.entries.isEmpty {
+                    Section {
+                        Text("No entries")
                     }
-                } label: {
-                    Text(String(format: "\(getDisplayParentFolder(folder))"))
-                }
-            }
-            
-            Button("UPLOAD") {
-                isPHPresented.toggle()
-            }
-            .sheet(isPresented: $isPHPresented) {
-                PhotoPicker(itemPublisher: itemPublisher)
-            }
-            
-            Button {
-                loadFolder()
-            } label: {
-                Text("RELOAD")
-            }
-        }
-        
-        if let list {
-            if list.entries.isEmpty {
-                Section {
-                    Text("No entries")
-                }
-            } else {
-                ForEach(list.entries) { entry in
-                    ListItem(entry: entry, alert: $alert, getFolder: getFolder, deleteEntry: deleteEntry, getMetadataEntry: getMetadateEntry, replaceEntry: replaceEntry )
+                } else {
+                    ForEach(list.entries) { entry in
+                        ListItem(entry: entry, alert: $alert, getFolder: getFolder, deleteEntry: deleteEntry, getMetadataEntry: getMetadateEntry, replaceEntry: replaceEntry )
+                    }
+                    Text("").id(3)
                 }
             }
         }

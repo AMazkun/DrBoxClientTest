@@ -14,6 +14,7 @@ struct ListItem: View {
     @StateObject var loader: ImageProvider
     @Binding var alert: Alert?
     @State private var showingDetail = false
+    @State private var showingMetadata = false
     @State private var confirmDeletePreseting  = false
     
     
@@ -65,11 +66,15 @@ struct ListItem: View {
                         
                         if let _ = loader.data?.file_metadata {
                             Button {
-                                getMetadataEntry(loader.data?.file_metadata!)
+                                showingMetadata = true
                             } label: {
                                 Text("Metadata")
                             }
                             .buttonStyle(.borderless)
+                            .sheet(isPresented: $showingMetadata, content: {
+                                let meta = NSMutableDictionary(dictionary: (loader.data?.file_metadata!)!)
+                                ExifDataView(items: meta)
+                           })
                         }
                         
                         //                        Spacer()

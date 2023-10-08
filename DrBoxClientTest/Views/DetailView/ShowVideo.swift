@@ -69,7 +69,7 @@ struct ShowVideo: View {
             print("Dismiss")
         }, content: {
             if let meta = loader.data!.meta {
-                ExifDataView(items: meta)
+                ExifDataView(items: meta, title: "Video Metadata")
             }
         })
         .sheet(isPresented: $isSharePresented, onDismiss: {

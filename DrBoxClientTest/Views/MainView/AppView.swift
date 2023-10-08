@@ -9,16 +9,18 @@ import Dependencies
 import Logging
 import SwiftUI
 import PhotosUI
+import Combine
 
 struct AppView: View {
     
     @Dependency(\.dropboxClient) var client
     @State var list: ListFolder.Result?
-    @State var folder: String = "na"
+    @State var folder: String = "/"
     @State var isSignedIn = false
     @State var alert: Alert?
     @State var isPHPresented: Bool = false
     @State var uploadTasks: Int = 0
+    @State var uploadTasksDone: Bool = false
     @State var netTask: Int = 0
     
     var body: some View {
@@ -28,10 +30,18 @@ struct AppView: View {
                 // Base Layer
                 Form {
                     SignUpSection(isSignedIn: $isSignedIn).body.id(1)
-                    FilesSection
+                    FilesSection.id(2)
+                        .onChange(of: uploadTasksDone){ value in
+                            withAnimation{
+                                // scrolling to the text value present at bottom
+                                if(uploadTasksDone){
+                                    p.scrollTo(3, anchor: .top)
+                                    uploadTasksDone = false
+                                }
+                            }
+                        }
                 }
                 .textSelection(.enabled)
-                .navigationTitle("App")
                 .task {
                     for await isSignedIn in client.auth.isSignedInStream() {
                         self.isSignedIn = isSignedIn
@@ -41,7 +51,7 @@ struct AppView: View {
                 
                 // Upper Layer
                 VStack (alignment: .trailing) {
-        
+                    
                     // Async tasks alert
                     if(netTask + uploadTasks > 0) {
                         Button {
@@ -64,7 +74,7 @@ struct AppView: View {
                     // FLOAT Button
                     Button {
                         // go home
-                        p.scrollTo(1)
+                        withAnimation{ p.scrollTo(1, anchor: .bottom) }
                     } label: {
                         Image(systemName: "house.fill")
                             .padding()
@@ -77,6 +87,33 @@ struct AppView: View {
                     .padding()
                 }
             }
+            .toolbar {
+                ToolbarItemGroup {
+                   if !itsRoot(folder) {
+                        Button {
+                            loadParentFolder()
+                        } label: {
+                            Image(systemName: "arrow.turn.up.left")
+                        }
+                    }
+                    
+                    Button {
+                        isPHPresented.toggle()
+                    } label: {
+                        Image(systemName: "square.and.arrow.up.fill")
+                    }
+                    .sheet(isPresented: $isPHPresented)
+                    {
+                        PhotoPicker(itemPublisher: itemPublisher)
+                    }
+                    Button {
+                        loadFolder()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                }
+            }
+
         }
         .onOpenURL { url in
             Task<Void, Never> {
@@ -104,6 +141,7 @@ struct AppView: View {
             actions: { _ in Button("OK") {} },
             message: { Text($0.message) }
         )
+        .navigationTitle("\(getDisplayFolder(folder))")
     }
 }
 
