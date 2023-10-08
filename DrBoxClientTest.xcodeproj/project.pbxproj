@@ -175,6 +175,7 @@
 		847B64182AC9DB9C00AACB28 /* ShowVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideo.swift; sourceTree = "<group>"; };
 		847B641F2AC9F13400AACB28 /* AsyncFullImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFullImage.swift; sourceTree = "<group>"; };
 		847F7E142AD2C202003481D0 /* DrBoxClientTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DrBoxClientTest copy-Info.plist"; path = "/Users/admin/Desktop/XCode/NONAMEDIGITAL/DropBox/DrBoxClientTest/DrBoxClientTest copy-Info.plist"; sourceTree = "<absolute>"; };
+		847F7E152AD2F6BE003481D0 /* UploadSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSession.swift; sourceTree = "<group>"; };
 		8489E0EB2ACDA52400B34DFC /* PHPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerCoordinator.swift; sourceTree = "<group>"; };
 		848F88B12AC6C3F1004589ED /* DrBoxClientTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrBoxClientTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F88B42AC6C3F1004589ED /* DrBoxClientTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrBoxClientTestApp.swift; sourceTree = "<group>"; };
@@ -440,6 +441,7 @@
 				84D8B2B52AC7626700524721 /* ActorIsolated.swift */,
 				84D8B2B62AC7626700524721 /* Client.swift */,
 				84D8B2B72AC7626700524721 /* Credentials.swift */,
+				847F7E152AD2F6BE003481D0 /* UploadSession.swift */,
 			);
 			path = DropboxClient;
 			sourceTree = "<group>";
