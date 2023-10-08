@@ -21,6 +21,7 @@ struct App: SwiftUI.App {
             // terminating
             removeTempFiles()
         }
+        askForPhotoLibraryPermission(locking: false, execute:{}, fail: {})
     }
     
     var body: some Scene {

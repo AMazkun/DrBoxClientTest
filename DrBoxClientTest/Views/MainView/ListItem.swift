@@ -39,7 +39,7 @@ struct ListItem: View {
         Section {
             HStack {
                 AsyncImageOwn(loader: loader)
-                // browsing folders
+                // show detail view
                     .onTapGesture {
                         if (loader.data != nil) {
                             if loader.isFolder {
@@ -51,7 +51,7 @@ struct ListItem: View {
                             }
                         }
                     }
-                // details
+                // detail view depends
                     .sheet(isPresented: $showingDetail) {
                         if loader.isPicrure { ShowImage(entry: entry)
                         } else {

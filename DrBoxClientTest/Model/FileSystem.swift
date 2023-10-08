@@ -62,8 +62,8 @@ func getFullUploadFilename(_ folder : String, name: String) -> String {
     return res
 }
 
-func itsNoRoot(_ folder: String) -> Bool {
-    return !(folder == "/" || folder == "" || folder == "na")
+func itsRoot(_ folder: String) -> Bool {
+    return folder == "/" || folder == "" || folder == "na"
 }
 
 func getParentFolder(_ folder: String) -> String {

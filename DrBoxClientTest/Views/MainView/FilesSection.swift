@@ -33,6 +33,7 @@ extension AppView {
     func stopUploadTask() {
         DispatchQueue.main.async { [self] in
             uploadTasks -= 1
+            if uploadTasks == 0 {loadFolder()}
         }
     }
     
@@ -60,44 +61,35 @@ extension AppView {
         }
     }
     
+    func loadFolder() {
+        Task<Void, Never> {
+            startNetTask()
+            do {
+                // lol
+                list = try await client.listFolder(path: itsRoot(folder) ? "" : folder )
+            } catch {
+                log.error("ListFolder failure", metadata: [
+                    "error": "\(error)",
+                    "localizedDescription": "\(error.localizedDescription)"
+                ])
+            }
+            stopNetTask()
+        }
+    }
+    
     @ViewBuilder
     var FilesSection: some View {
         
         Section(getDisplayFolder(folder)) {
-            Button {
-                Task<Void, Never> {
-                    startNetTask()
-                    do {
-                        let parentFolder = getParentFolder(folder)
-                        // lol
-                        list = try await client.listFolder(path: (parentFolder == "/" ? "" : parentFolder))
-                        folder = parentFolder;
-                    } catch {
-                        log.error("ListFolder failure", metadata: [
-                            "error": "\(error)",
-                            "localizedDescription": "\(error.localizedDescription)"
-                        ])
-                    }
-                    stopNetTask()
-                }
-            } label: {
-                Text(String(format: "\(getDisplayParentFolder(folder))"))
-            }
-            
-            Button("UPLOAD") {
-                isPHPresented.toggle()
-            }
-            .sheet(isPresented: $isPHPresented) {
-                PhotoPicker(itemPublisher: itemPublisher)
-            }
-            
-            if(itsNoRoot(folder)) {
+            if !itsRoot(folder) {
                 Button {
                     Task<Void, Never> {
                         startNetTask()
                         do {
+                            let parentFolder = getParentFolder(folder)
                             // lol
-                            list = try await client.listFolder(path: folder)
+                            list = try await client.listFolder(path: (parentFolder == "/" ? "" : parentFolder))
+                            folder = parentFolder;
                         } catch {
                             log.error("ListFolder failure", metadata: [
                                 "error": "\(error)",
@@ -107,8 +99,21 @@ extension AppView {
                         stopNetTask()
                     }
                 } label: {
-                    Text("RELOAD")
+                    Text(String(format: "\(getDisplayParentFolder(folder))"))
                 }
+            }
+            
+            Button("UPLOAD") {
+                isPHPresented.toggle()
+            }
+            .sheet(isPresented: $isPHPresented) {
+                PhotoPicker(itemPublisher: itemPublisher)
+            }
+            
+            Button {
+                loadFolder()
+            } label: {
+                Text("RELOAD")
             }
         }
         

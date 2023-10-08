@@ -24,6 +24,8 @@ struct AppView: View {
     var body: some View {
         ScrollViewReader { p in
             ZStack (alignment: .bottomTrailing) {
+                
+                // Base Layer
                 Form {
                     SignUpSection(isSignedIn: $isSignedIn).body.id(1)
                     FilesSection
@@ -33,35 +35,14 @@ struct AppView: View {
                 .task {
                     for await isSignedIn in client.auth.isSignedInStream() {
                         self.isSignedIn = isSignedIn
+                        if isSignedIn { loadFolder() }
                     }
                 }
-                .onOpenURL { url in
-                    Task<Void, Never> {
-                        do {
-                            _ = try await client.auth.handleRedirect(url)
-                        } catch {
-                            log.error("Auth.HandleRedirect failure", metadata: [
-                                "error": "\(error)",
-                                "localizedDescription": "\(error.localizedDescription)"
-                            ])
-                        }
-                    }
-                }
-                .alert(
-                    alert?.title ?? "",
-                    isPresented: Binding(
-                        get: { alert != nil },
-                        set: { isPresented in
-                            if !isPresented {
-                                alert = nil
-                            }
-                        }
-                    ),
-                    presenting: alert,
-                    actions: { _ in Button("OK") {} },
-                    message: { Text($0.message) }
-                )
+                
+                // Upper Layer
                 VStack (alignment: .trailing) {
+        
+                    // Async tasks alert
                     if(netTask + uploadTasks > 0) {
                         Button {
                         } label: {
@@ -80,6 +61,7 @@ struct AppView: View {
                     }
                     Spacer()
                     
+                    // FLOAT Button
                     Button {
                         // go home
                         p.scrollTo(1)
@@ -96,8 +78,35 @@ struct AppView: View {
                 }
             }
         }
+        .onOpenURL { url in
+            Task<Void, Never> {
+                do {
+                    _ = try await client.auth.handleRedirect(url)
+                } catch {
+                    log.error("Auth.HandleRedirect failure", metadata: [
+                        "error": "\(error)",
+                        "localizedDescription": "\(error.localizedDescription)"
+                    ])
+                }
+            }
+        }
+        .alert(
+            alert?.title ?? "",
+            isPresented: Binding(
+                get: { alert != nil },
+                set: { isPresented in
+                    if !isPresented {
+                        alert = nil
+                    }
+                }
+            ),
+            presenting: alert,
+            actions: { _ in Button("OK") {} },
+            message: { Text($0.message) }
+        )
     }
 }
+
 #Preview {
     AppView()
 }

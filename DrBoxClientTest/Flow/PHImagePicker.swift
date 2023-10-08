@@ -38,3 +38,21 @@ struct PhotoPicker: UIViewControllerRepresentable {
     }
 }
 
+func askForPhotoLibraryPermission(locking: Bool, execute: @escaping ()->(), fail: @escaping ()->()) {
+    let locker : NSLock = NSLock()
+    let photos = PHPhotoLibrary.authorizationStatus()
+
+    if photos == .notDetermined {
+        if (locking) {locker.lock()}
+        PHPhotoLibrary.requestAuthorization({status in
+            if status == .authorized{
+                //access granted
+                execute()
+            } else {
+                fail()
+            }
+            if (locking) {locker.unlock()}
+        })
+    }
+    if (locking) {locker.lock()}
+}
