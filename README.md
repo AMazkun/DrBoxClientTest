@@ -27,11 +27,11 @@ Inspired and based on [DROP BOX SDK](https://github.com/darrarski/swift-dropbox-
   
 - File actions:
   - Show details
-  - Upload (holly sh... jpeg - is unsupported extension, blame Apple)
+  - Upload
   - Download
-  - Show metadata (no beauty, sorry)
+  - Show metadata
   - Delete
-  - Share file (Data Representation issues, not critical)
+  - Share file 
 
 - File Detail View
   - Image: 
